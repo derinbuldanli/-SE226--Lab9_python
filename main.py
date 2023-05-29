@@ -2,7 +2,7 @@ import datetime
 import tkinter as tk
 import sqlite3
 
-# Set up the database and table
+
 conn = sqlite3.connect('mcu_movies.db')
 cursor = conn.cursor()
 cursor.execute('''
@@ -15,7 +15,7 @@ cursor.execute('''
 ''')
 conn.commit()
 
-# Read the file and populate the table
+
 with open('marvel.txt', 'r') as file:
     lines = file.readlines()
 
@@ -32,7 +32,7 @@ with open('marvel.txt', 'r') as file:
     conn.commit()
 
 
-# Create the interface
+
 def add_button_clicked():
     popup = tk.Toplevel(root)
     entry = tk.Entry(popup)
